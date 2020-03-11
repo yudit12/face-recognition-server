@@ -47,44 +47,10 @@ db.select('*').from('users').then(data=>{
 const app= express();
 app.use(bodyParser.json());
 app.use(cors());
-// const  database={
-//     users:[
-//         {
-//             id:'111',
-//             name: 'g',
-//             email:'g',
-//             password: '123',
-//             entries: 0,
-//             joined :new Date()
 
-
-//         },
-//         {
-//             id:'123',
-//             name: 'john',
-//             email:'jjj@gmail.com',
-//             password: 'xxxxxxxx',
-//             entries: 0,
-//             joined :new Date()
-
-
-//         },
-//         {
-//             id:'456',
-//             name: 'dddd',
-//             email:'dddd@gmail.com',
-//             password: 'ggggggggg',
-//             entries: 0,
-//             joined :new Date()
-
-
-//         }
-//     ]
-// }
 
 app.get('/',(req,res)=>{
-    // res.send('this is working')
-    res.send(database.users)
+    res.send('this is working')
 })
 
 // siginin 
