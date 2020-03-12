@@ -28,26 +28,27 @@ const signin= require('./controllers/signin.js');
 const profile= require('./controllers/profile.js');
 const image= require('./controllers/image.js');
 
-/*
-// connection to db localhost
+
+
+// // connection to db localhost
+// const db= knex({
+//     client: 'pg',
+//     connection: {
+//       host : '127.0.0.1', //localhost
+//       user : 'postgres',
+//       password : '1234',
+//       database : 'postgres'
+//     }
+// });
+
+
+
+// conect to  heroku database 
 const db= knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1', //localhost
-      user : 'postgres',
-      password : '1234',
-      database : 'postgres'
-    }
-});
-
-
-*/
-//conect to  heroku database 
-const db= knex({
-    client: 'pg',
-    connection: {
-      connectionString:process.env.DATABASE_URL,
-      ssl: true,
+        connectionString: process.env.DATABASE_URL,
+        ssl: true,
    
     }
 });
