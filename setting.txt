@@ -1,0 +1,54 @@
+py -3 -m venv env   
+ env\Scripts\activate
+ pip3 install Flask 
+ pip3 install Flask-SQLAlchemy
+ 
+ 
+#activate  virtual environment
+env\Scripts\activate
+
+set FLASK_APP=api/__init__.py   # application name 
+$env:FLASK_APP = "api/__init__.py" 
+flask run 
+
+# debuge mode 
+set FLASK_ENV=development
+$env:FLASK_ENV = "development"
+flask run
+
+
+# to create db
+# enter to python shell
+
+
+env\Scripts\activate
+python
+from api import db, create_app
+db.create_all(app=create_app())
+
+# db via cmd
+psql postgres postgres
+\d - see all tables 
+
+
+
+pip install flask-wtf # forms 
+
+#get secret key
+ import secrets
+secrets.token_hex(16) 
+
+from flask_bcrypt import Bcrypt
+ bcrypt = Bcrypt()   
+ pw_hash = bcrypt.generate_password_hash('hhhhhhh')
+pw_hash = bcrypt.generate_password_hash('hhhhhhh').decode('utf-8')#string
+bcrypt.check_password_hash(pw_hash, 'hhhhhhh') 
+
+
+env\Scripts\activate
+set FLASK_APP=api/__init__.py   # application name 
+$env:FLASK_APP = "api/__init__.py" 
+set FLASK_ENV=development
+$env:FLASK_ENV = "development"
+flask run 
+
