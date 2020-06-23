@@ -14,23 +14,26 @@ main = Blueprint('main', __name__)
 # bcrypt = Bcrypt(main)
 bcrypt = Bcrypt()
 # app = ClarifaiApp()
-@main.route('/')
-def hello_world():
-    return 'Hello, World!'
+# @main.route('/')
+# def hello_world():
+#     return 'Hello, World!'
 
+@main.route('/')
+def index():
+    return main.send_static_file('index.html')
 ## register- add user
-@main.route('/register',methods=['POST'])
+@main.route('/api/register',methods=['POST'])
 def register():
     return register1.handle_registration(bcrypt)
       
 #sginin 
-@main.route('/sginin',methods=['POST'])
+@main.route('/api/sginin',methods=['POST'])
 def sginin():
     return sginin1.handle_sginin(bcrypt)
 
 
 # users images entries counter  
-@main.route('/image',methods=['PUT'])
+@main.route('/api/image',methods=['PUT'])
 def images_entries_counter():
     return images_counter.count_images_entries()
 # # api call
@@ -80,4 +83,5 @@ def password_strength_checker():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
+    main.debug= True
     main.run(threaded=True, port = int(os.environ.get('PORT', 5000)))
