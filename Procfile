@@ -1,1 +1,1 @@
-web: gunicorn api.views
+web: gunicorn api.__init__
