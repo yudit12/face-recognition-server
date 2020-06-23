@@ -14,13 +14,11 @@ main = Blueprint('main', __name__)
 # bcrypt = Bcrypt(main)
 bcrypt = Bcrypt()
 # app = ClarifaiApp()
-# @main.route('/')
-# def hello_world():
-#     return 'Hello, World!'
-
 @main.route('/')
-def index():
-    return main.send_static_file('index.html')
+def hello_world():
+    return 'Hello, World!'
+
+
 ## register- add user
 @main.route('/api/register',methods=['POST'])
 def register():
