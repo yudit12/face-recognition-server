@@ -75,3 +75,9 @@ def password_strength_checker():
 #              return  jsonify('get user profile error'),400# error geting user
 #     except:
 #         return jsonify('something went worng , Please try again'),400
+
+
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    main.run(threaded=True, port = int(os.environ.get('PORT', 5000)))

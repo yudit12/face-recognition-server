@@ -9,7 +9,7 @@ ma = Marshmallow()
 def create_app():
     app = Flask(__name__)
     # bcrypt = Bcrypt(app)
-    app.config['SECRET_KEY']='b726da71426e92068ed89850620b1522'
+    # app.config['SECRET_KEY']='b726da71426e92068ed89850620b1522'
     ENV = 'dev'
     if ENV == 'dev':
         app.debug=True
