@@ -11,8 +11,8 @@ def create_app():
     app = Flask(__name__, static_folder="C:/Users/use/Documents/GitHub/face-recognition/build", static_url_path='/')
     # bcrypt = Bcrypt(app)
     # app.config['SECRET_KEY']='b726da71426e92068ed89850620b1522'
-    ENV = 'dev'
-    # ENV = 'prod'
+    # ENV = 'dev'
+    ENV = 'prod'
     if ENV == 'dev':
 
         app.debug=True
