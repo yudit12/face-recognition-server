@@ -7,8 +7,8 @@ from flask_marshmallow import Marshmallow
 db = SQLAlchemy()
 ma = Marshmallow()
 def create_app():
-    #, static_folder="C:/Users/use/Documents/GitHub/face-recognition/build", static_url_path='/'
-    app = Flask(__name__)
+    #
+    app = Flask(__name__, static_folder="C:/Users/use/Documents/GitHub/face-recognition/build", static_url_path='/')
     # bcrypt = Bcrypt(app)
     # app.config['SECRET_KEY']='b726da71426e92068ed89850620b1522'
     ENV = 'dev'
