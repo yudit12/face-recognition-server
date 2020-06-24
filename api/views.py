@@ -16,7 +16,6 @@ main = Blueprint('main', __name__)
 # CORS(main)
 # main.config['CORS_HEADERS'] = 'Content-Type'
 # cors = CORS(main, resources={r"/*": {"origins": "localhost"}})
-# bcrypt = Bcrypt(main)
 bcrypt = Bcrypt()
 # app = ClarifaiApp()
 @main.route('/')
