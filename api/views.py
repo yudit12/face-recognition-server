@@ -6,16 +6,16 @@ import api.controllers.register as register1
 import api.controllers.sginin as sginin1 
 import api.controllers.images_entries_counter as images_counter 
 import api.controllers.password_strength_checker as password_checker
-from flask_cors import CORS
+# from flask_cors import CORS
 import sys 
 import os
 # from flask import abort
-print(sys.path)
+# print(sys.path)
 
 main = Blueprint('main', __name__)
-CORS(main)
-main.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(main, resources={r"/*": {"origins": "localhost"}})
+# CORS(main)
+# main.config['CORS_HEADERS'] = 'Content-Type'
+# cors = CORS(main, resources={r"/*": {"origins": "localhost"}})
 # bcrypt = Bcrypt(main)
 bcrypt = Bcrypt()
 # app = ClarifaiApp()
